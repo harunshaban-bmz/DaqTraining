@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BMZ.Daq" Version="0.2.0" />
+    <PackageReference Include="BMZ.Daq.Gui" Version="0.2.0" />
+    <PackageReference Include="BMZ.Daq.Keysight970A" Version="0.2.0" />
+    <PackageReference Include="BMZ.MVVM" Version="0.0.5" />
+    <PackageReference Include="BMZ.PowerSupply.EA" Version="0.2.1" />
+    <PackageReference Include="BMZ.SCPI.IP" Version="0.2.0" />
+    <PackageReference Include="BMZ.SCPI.UART" Version="0.2.0" />
+    <PackageReference Include="BMZ.SCPI.USB" Version="0.0.10" />
+    <PackageReference Include="BMZ.TestSystemBase" Version="2.1.5" />
+    <PackageReference Include="BMZ.TestSystemBase.Basics" Version="1.5.3" />
+    <PackageReference Include="Unity" Version="5.8.11" />
+  </ItemGroup>
+
+</Project>
