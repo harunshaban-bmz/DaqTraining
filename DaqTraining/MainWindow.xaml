@@ -13,6 +13,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -26,15 +27,18 @@
         <TextBlock Grid.Row="1" Grid.Column="0" Text="Set Voltage:" VerticalAlignment="Center" Margin="0,0,10,0"/>
         <TextBox Grid.Row="1" Grid.Column="1" Name="VoltageTextBox" Margin="0,5" Padding="5"/>
 
-        <TextBlock Grid.Row="2" Grid.Column="0" Text="Daq Reading:" VerticalAlignment="Center" Margin="0,0,10,0"/>
-        <TextBox Grid.Row="2" Grid.Column="1" Name="DaqReadingTextBox" Margin="0,5" Padding="5" IsEnabled="False"/>
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Set Current:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Name="CurrentTextBox" Margin="0,5" Padding="5"/>
 
-        <Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" 
-             Content="Set Voltage" Name="SetButton" Width="150"
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Daq Reading:" VerticalAlignment="Center" Margin="0,0,10,0"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="DaqReadingTextBox" Margin="0,5" Padding="5" IsEnabled="False"/>
+
+        <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" 
+             Content="Charge" Name="SetButton" Width="150"
              Click="SetButton_Click" Margin="0,15" Padding="10,5"/>
 
-        <TextBlock Grid.Row="4" Grid.Column="0" Text="Status:" VerticalAlignment="Center" Margin="0,10,10,0"/>
-        <TextBlock Grid.Row="4" Grid.Column="1" Name="StatusTextBlock" 
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Status:" VerticalAlignment="Center" Margin="0,10,10,0"/>
+        <TextBlock Grid.Row="5" Grid.Column="1" Name="StatusTextBlock" 
                 Text="Ready" VerticalAlignment="Center" Margin="0,10,0,0"/>
     </Grid>
 </Window>
