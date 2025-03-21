@@ -86,7 +86,7 @@ namespace DaqTraining
         private void VoltageCheck(object sender, EventArgs e)
         {
             Debug.WriteLine($"VoltageCheck: measuredVoltage = {(int)measuredVoltage}");
-            if((int)measuredVoltage == 37)
+            if((int)measuredVoltage == 34)
             {
                 _PowerSupply.General.Connection.Connect();
                 _PowerSupply.Current.SetCurrent(0);
@@ -95,22 +95,25 @@ namespace DaqTraining
                 Thread.Sleep(500);
                 StatusTextBlock.Text = "Checking";
                 Thread.Sleep(60000);
-                if((int)measuredVoltage != 36)
+                _PowerSupply.General.Connection.Disconnect();
+
+                if ((int)measuredVoltage != 33 || (int)measuredVoltage < 33)
                 {
-                    _PowerSupply.General.Connection.Disconnect();
-                    PowerSupply(38, 5);
-                }
-                else
-                {
-                    _PowerSupply.General.Connection.Disconnect();
+                    PowerSupply(35, 5);
                 }
             }
+
+            //if ((int)measuredVoltage != 36 || (int)measuredVoltage < 36)
+            //{
+            //    PowerSupply(38, 5);
+            //}
+
             //_PowerSupply.Output.SetOutput(false);
         }
 
         private void SetButton_Click(object sender, RoutedEventArgs e)
         {
-            PowerSupply(38, 5);
+            PowerSupply(35, 5);
 
             ////checking for numeric input
             //int number;
